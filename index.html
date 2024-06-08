@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio | Ijahar Khan</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- Templete Tutorials Video Link -->
+    <!-- https://www.youtube.com/watch?v=0YFrGy_mzjY&list=PL3zh_NC1vPxLRN04HhwGx2jvDPL-ARAGC&index=43 -->
 </head>
 <body>
 
@@ -43,17 +45,73 @@
             <h1 class="sub-title">About Me</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis placeat consequuntur doloribus minima vel beatae neque soluta repudiandae, iste autem incidunt, deleniti ullam quo voluptatum, nesciunt eaque facere animi. </p>
             <div class="tab-titles">
-                <p class="tablinks">Skills</p>
-                <p class="tablinks active">Experience</p>
-                <p class="tablinks">Education</p>
+                <p class="tablinks active" onclick="btnTabLinks('skills')">Skills</p>
+                <p class="tablinks " onclick="btnTabLinks('experience')">Experience</p>
+                <p class="tablinks" onclick="btnTabLinks('education')">Education</p>
+                <p class="tablinks" onclick="btnTabLinks('htmlcss')">Projects</p>
             </div>
 
-            <div class="tab-contents"></div>
+            <div class="tab-contents active" id="skills">
+                <ul>
+                    <li><span>UX</span><br>Designing Web Application Interfaces</li>
+                    <li><span>Web Developement</span><br>Web App Developement</li>
+                    <li><span>MS Office</span><br>Familiar with Microsoft Office</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2015 - Current</span><br>Web developement at Criterion Tech Pvt Ltd Lucknow</li>
+                    <li><span>2014 - 2015</span><br>Accounts Executive at Ambalika Engineering College Lucknow</li>
+                    <li><span>2013 - 2014</span><br>Summer Training at Sayma Engineering Dadra and Nagar Haveli</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>                    
+                    <li><span>2018</span><br>MCA from Jaipur National University - Jaipur</li>
+                    <li><span>2015</span><br>Web Development Training from Criterion Tech Pvt Ltd Lucknow</li>
+                    <li><span>2014</span><br>B.Com from DDU Gorakhpur - Uttar Pradesh</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="htmlcss">
+                <ul>                    
+                    <li><span>Car Website</span><br><a class="projectLink" href="https://ijaharkhan.github.io/carWebsiteSinglePage.github.io/" target="_blank">Car Website Template</a></li>
+                    <li><span>login</span><br><a class="projectLink" href="https://ijaharkhan.github.io/login.github.io/" target="_blank">login Template</a></li>
+                    <li><span>Admin</span><br><a class="projectLink" href="https://ijaharkhan.github.io/adminDashboard.github.io/" target="_blank">Admin Template</a></li>                   
+                    <li><span>Grid Admin Dashboard</span><br><a class="projectLink" href="https://ijaharkhan.github.io/gridAdminTemplate.github.io/" target="_blank">Grid Admin Dashboard Template</a></li>                   
+                    
+                </ul>
+            </div>
+
         </div>
     </div>
 </div>
 
     </div>
+
+
+
+
+
+    <script>
+        let tablinks = document.getElementsByClassName('tablinks')
+        let tabContents = document.getElementsByClassName('tab-contents')
+
+        const btnTabLinks = (getId) => {
+            for (let tablink of tablinks) {
+                tablink.classList.remove('active')
+            }
+
+            for (let tabContent of tabContents) {
+                tabContent.classList.remove('active')
+            }
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(getId).classList.add('active')
+        }
+    </script>
     
 </body>
 </html>
