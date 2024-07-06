@@ -286,9 +286,48 @@ width: 100%;
     text-align: center;       
     transition: height 0.5s;
     overflow: hidden;
-    
+    padding: 0 20px;
+    font-size: 14px;    
+    align-items: center;
 }
+
+
 
 .work:hover .layer {
     height: 100%;
+}
+
+.layer a{
+    background-color: var(--lite-red);
+    background-color: var(--white);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;   
+}
+
+.layer a {
+    background-color: var(--lite-red);
+    background-color: var(--white);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;   
+    text-align: center;
+    line-height: 60px;
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    border: 1px solid var(--lite-red);
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: var(--white); 
+    transition: background-color 0.5s;  
+}
+
+.btn:hover {
+    background-color: var(--lite-red);   
 }
