@@ -208,3 +208,38 @@ width: 100%;
     margin-top: 15px;
 }
 
+.services-list div{
+   background-color:#262626;
+   padding:25px;
+   font-size:13px;
+   font-weight:300;
+   border-radius:10px;
+}
+
+.services-list div i{
+    font-size:40px;
+    margin-bottom:20px;
+ }
+
+ .services-list div h2{
+    font-size:25px;
+    font-weight:500;
+    margin-bottom:15px;
+ }
+
+
+ .services-list div a{
+    text-decoration:none;
+    color:#fff;
+    font-size: 12px;
+    margin-top:20px;
+    display: inline-block;
+ }
+
+
+ .services-list div:hover{
+    background-color:#b54769;
+    transform: translateY(-10px)
+ }
+
+
