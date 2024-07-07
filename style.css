@@ -45,6 +45,7 @@ body{
     background-size: cover;
     background-position-y: 50px;
     background-repeat: no-repeat;   
+    background-attachment:fixed;
 }
 
 
@@ -117,21 +118,21 @@ width: 100%;
    color:var(--lite-gray);
 }
 
-#about .row{
+ .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-#about .about-col-1{
+ .about-col-1{
   flex-basis: 35%;
 }
 
-#about .about-col-2{
+ .about-col-2{
   flex-basis: 60%;
 }
 
-#about .about-col-1 img{
+ .about-col-1 img{
   background-color: var(--lite-gray);
   /* background-color: #272627; */
   width: 100%;
