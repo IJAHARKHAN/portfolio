@@ -476,6 +476,30 @@ nav .btn-toggle{
         top: 25px;
      }
 
+     .sub-title {
+        font-size: 40px;        
+    }
+
+    .tab-titles {       
+        margin: 20px 0 20px;
+    }
+
+    .tablinks {
+        margin-right: 10px;   
+        font-size: 15px;    
+    }
+
+    .contact-right {
+        flex-basis: initial;
+    }
+
+    .contact-left {
+        flex-basis: initial;
+    }  
+
+    .about-col-2 h1 + p{
+        font-size: 13px;
+    }
 
 }
 
