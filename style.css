@@ -444,6 +444,13 @@ letter-spacing: 1px;
     cursor: pointer;
 }
 
+#submitMessage {
+    color: #1fbd1f;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 
 nav .btn-toggle{
     display:none;
