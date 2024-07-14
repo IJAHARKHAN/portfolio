@@ -18,13 +18,16 @@
             <nav>
                 <!-- <img src="img/logo.png" alt=""> -->
                 <a href="#" class="logo"><span>Ijahar</span>FrontEnd</a>
-                <ul>
+                <ul id="side-menu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>                    
-                    <li><a href="#contact">Contact</a></li>                    
+                    <li><a href="#contact">Contact</a></li> 
+                    <i class="fa-regular fa-circle-xmark btn-toggle" onclick="btnCloseMenu()"></i>            
                 </ul>
+                <i class="fa-solid fa-bars btn-toggle" onclick="btnOpenMenu()"></i>
+
             </nav>
 
             <div class="header-text">
@@ -180,8 +183,8 @@
             <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">My Contact</h1>
-                <p>khan7oct@gmail.com</p>
-                <p>+91 8948184933</p>
+                <p><i class="fa-solid fa-envelope"></i>khan7oct@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>+91 8948184933</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/moon.khan.7528" target="_blank"> <i class="fa-brands fa-square-facebook"></i> </a>
                     <a href="https://x.com/Ijaharuddinkhan" target="_blank"> <i class="fa-brands fa-square-x-twitter"></i> </a>
@@ -189,21 +192,22 @@
                     <a href="https://www.linkedin.com/in/ijaharuddin-khan-377b906b/" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a>
                     <a href="https://api.whatsapp.com/send/?phone=918948184933&text&type=phone_number&app_absent=0" target="_blank"> <i class="fa-brands fa-square-whatsapp"></i> </a>
                 </div>
+                <a href="img/my-cv.pdf" download class="btn btn2">Download CV</a>
 
             </div>
             <div class="contact-right">
                 <form>
                     <input type="text" name="Name" id="" placeholder="Your Name" required>
-                    <input type="email" name="Email" id="" placeholder="Your Eamil" required>
+                    <input type="email" name="Email" id="" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" id="" placeholder="Your Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
-            </div>
-            
-            
-           
+            </div> 
+        </div>
 
+        <div class="copyright">
+            <p>Copyright @ Ijahar Khan. Made with <i class="fa-solid fa-heart"></i> by Ijahar<span>FrontEnd</span></p>
         </div>
         
     </div>
@@ -229,6 +233,25 @@
             document.getElementById(getId).classList.add('active')
         }
     </script>
+
+
+
+
+<script>
+    let sideMenu = document.getElementById('side-menu')
+
+
+    let btnCloseMenu = () =>{
+        sideMenu.style.right = '-250px'
+
+    }
+
+
+    let btnOpenMenu = () =>{
+        sideMenu.style.right = '0'
+
+    }
+</script>
     
 </body>
 </html>

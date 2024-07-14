@@ -1,14 +1,15 @@
 :root {
     --yellow: #f9d806;
     --light-yellow: #ffee80;
-    --black: #130f40;
-    --light-color: #666;
+    --black: #000;
+    --light-color: #262626;
     --border: 2px solid rgba(0, 0, 0, .1);
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     --white: #fff;
     --red:#ff0000;
     --lite-red:#b54769;
     --lite-gray:#ababab;
+    
 }
 
 
@@ -25,8 +26,7 @@ html{
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
-    
+    width: 5px;    
 }
 
 ::-webkit-scrollbar-thumb{   
@@ -38,8 +38,8 @@ background-color: var(--light-yellow);
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 #header {
@@ -330,21 +330,153 @@ width: 100%;
     padding: 14px 50px;
     border-radius: 6px;
     color: var(--white); 
-    transition: background-color 0.5s;  
+    transition: background-color 0.5s, transform .5s;
+  
 }
 
 .btn:hover {
-    background-color: var(--lite-red);   
+    background-color: var(--lite-red);  
+    transform: translateY(-5px) 
 }
+
+.btn.btn2{
+    display: inline-block;
+    background-color: var(--lite-red);
+}
+    
 
 .contact-left{
     flex-basis: 35%;
 }
 
 .contact-right{
-    flex-basis: 36%;
+    flex-basis: 60%;
 }
 
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 20px;
 }
+
+.contact-left p i{
+    color: var(--lite-red);
+    margin-right: 10px;
+    font-size:18px;
+}
+
+.social-icons{
+    margin-top: 20px;
+}
+
+.social-icons a{
+    color: var(--white);
+    font-size:23px;
+    margin-right: 7px;
+    display:inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{   
+    color: var(--lite-red);
+    transform: translateY(-5px)
+    
+}
+
+.contact-right form{
+width: 100%;;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    /* background-color: #262626; */
+    background-color: var(--light-color);
+    color:var(--white);
+    padding: 15px;
+    margin: 10px 0px;
+    font-size: 18px;
+    border-radius:6px;
+}
+
+ form textarea{
+    resize: none;
+}
+
+form .btn{
+    resize: none;
+    margin: 10px 0px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.copyright{
+text-align: center;
+padding: 15px 0;
+background-color: var(--light-color);
+/* font-weight: 600; */
+margin-top: 10px;
+font-size: 13px;
+letter-spacing: 1px;
+}
+
+.copyright i{
+    color: var(--red);
+}
+
+.copyright span{
+ color: var(--yellow);
+}
+
+/* ################## Media Query ############## */
+
+nav .btn-toggle{
+    display:none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(img/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{       
+        font-size: 30px;
+    }
+
+    nav .btn-toggle{
+        display:block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        /* background-color: var(--red); */
+        background-image: linear-gradient( #d51d56, #808080c4);        
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        padding: 50px;
+        z-index: 1;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+       display: block;
+       margin: 25px 0 0 0;
+    }
+
+    nav ul .btn-toggle{
+        position: absolute;
+        top: 25px;
+     }
+
+
+}
+
+
