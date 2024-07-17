@@ -198,6 +198,13 @@ width: 100%;
     color:var(--lite-red);
     font-size: 14px;
 }
+
+.tab-contents ul li a{
+   text-decoration:none;
+   color: var(--white)
+}
+
+
 .projectLink{
     color:var(--lite-gray);
     text-decoration: underline;
