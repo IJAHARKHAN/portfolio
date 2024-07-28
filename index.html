@@ -202,9 +202,16 @@
                     <input type="text" name="Name" id="" placeholder="Your Name" required>
                     <input type="email" name="Email" id="" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" id="" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <div class="submitbtn-loader-message">
+                        <button type="submit" class="btn btn2">Submit</button> 
+                        <div id="loader" style="display: none;"><img src="img/imgLoader.gif" alt=""></div>
+                       <div id="submitMessage"></div>
+                    </div>
+                    
+                    
+                   
                 </form>
-                <div id="submitMessage"></div>
+                
             </div>
             </div> 
         </div>
@@ -257,12 +264,15 @@
     const form = document.forms['submit-to-google-sheet']
 
     let submitMessage = document.getElementById('submitMessage')
+    let loader = document.getElementById('loader')
   
     form.addEventListener('submit', e => {
-      e.preventDefault()
+      e.preventDefault()      
+      loader.style.display = 'block'
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         // .then(response => console.log('Success!', response))
         .then(response => {
+            loader.style.display = 'none'
             submitMessage.innerHTML = 'Message sent successfully!'
             setTimeout(() => {
                 submitMessage.innerHTML = ''

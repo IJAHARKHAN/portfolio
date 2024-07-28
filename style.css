@@ -463,6 +463,17 @@ nav .btn-toggle{
     display:none;
     cursor: pointer;
 }
+
+.submitbtn-loader-message{
+    display: flex;
+    gap: 20px;
+    align-items:center;
+}
+
+#loader img{
+    height: 59px;
+}
+
 /* ################## Media Query ############## */
 
 
